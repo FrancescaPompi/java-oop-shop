@@ -85,7 +85,7 @@ public class Prodotto {
 	
 	// metodo per il nome esteso
 	public String nomeEsteso() {
-		return codice + nome;
+		return codice + ",  " + nome;
 	}
 	
 
