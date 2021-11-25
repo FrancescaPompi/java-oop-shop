@@ -15,10 +15,10 @@ public class Prodotto {
 	// costruttori
 	public Prodotto() {
 		this.codice = generaCodice();
-		this.nome = nome;
-		this.descrizione = descrizione;
-		this.prezzo = prezzo;
-		this.iva = iva;
+//		this.nome = nome;
+//		this.descrizione = descrizione;
+//		this.prezzo = prezzo;
+//		this.iva = iva;
 	}
 	
 	
@@ -73,7 +73,20 @@ public class Prodotto {
 		return random.nextInt();
 	}
 	
+	// metodo per il prezzo base
+	public double prezzoBase() {
+		return prezzo;
+	}
 	
+	// metodo per il prezzo con iva
+	public double prezzoCompresaIva() {
+		return prezzo + (prezzo * 0.22);
+	}
+	
+	// metodo per il nome esteso
+	public String nomeEsteso() {
+		return codice + nome;
+	}
 	
 
 }
