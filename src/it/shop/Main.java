@@ -8,13 +8,15 @@ public class Main {
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Inserisci nome prodotto: ");
-		String nome = scan.nextLine();
+		String nomeProdotto = scan.nextLine();
 		System.out.print("Inserisci la descrizione del prodotto: ");
-		String descrizione = scan.nextLine();
+		String descrizioneProdotto = scan.nextLine();
 		
-		Prodotto prodotto1 = new Prodotto(nome, descrizione, 0, 0.22);
-		System.out.println("Il prezzo è: " + prodotto1.getPrezzo() + " €");
-		System.out.println("Il prezzo compreso di iva al " + prodotto1.getIva() + " è: " + prodotto1.prezzoCompresaIva() + " €");
+		Prodotto prodotto1 = new Prodotto(nomeProdotto, descrizioneProdotto, 0, 0.22);
+		System.out.println("Codice prodotto: " + prodotto1.getCodice());
+		System.out.println("Nome esteso: " + prodotto1.nomeEsteso());
+		System.out.println("Prezzo: " + prodotto1.getPrezzo() + " €");
+		System.out.println("Prezzo con iva al 22%: " + prodotto1.prezzoCompresaIva() + " €");
 		
 		
 		scan.close();

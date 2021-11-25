@@ -79,7 +79,7 @@ public class Prodotto {
 	// metodo per generare un codice random
 	private int generaCodice() {
 		Random random = new Random();
-		return random.nextInt();
+		return random.nextInt(1000) + 0;
 	}
 	
 	// metodo per generare prezzo random
@@ -100,7 +100,7 @@ public class Prodotto {
 	
 	// metodo per il nome esteso
 	public String nomeEsteso() {
-		return this.codice + ",  " + this.nome;
+		return this.codice + "-" + this.nome;
 	}
 	
 	// metodo per validare che il nome non sia null o lunghezza 0
